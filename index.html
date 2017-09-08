@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LIFE as we know it - a Cellular Automaton experiment.</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css" integrity="sha256-CDVQJfU+jJGU/oyDzvnzuGXbv0rz+SyBsPQwyn7x/jQ=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+<section class="section">
+  <div class="container">
+    <h1 class="title">LIFE as we know it</h1>
+    <p class="subtitle">A Cellular Automaton experiment.</p>
+  </div>
+  <div class="container">
+    <div id="board">
+      <table>
+        <tr v-for="row in rows">
+          <td v-for="col in row" v-bind:class="calcAgeClass(col.age)"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+</body>
+<script src="https://unpkg.com/vue"></script>
+<script src="./src/js/board.js"></script>
+</html>

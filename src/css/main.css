@@ -1,0 +1,47 @@
+#board {
+    font-family: monospace;
+}
+
+#board td {
+    width: 5px;
+    height: 5px;
+    border: 1px solid #ccc;
+}
+
+
+.age-0 {
+    background-color: #FFF;
+}
+.age-1 {
+    background-color: #CEC;
+}
+.age-2 {
+    background-color: #AEA;
+}
+.age-3 {
+    background-color: #3C3;
+}
+.age-4 {
+    background-color: #993;
+}
+.age-5 {
+    background-color: #CC3;
+}
+.age-6 {
+    background-color: #EC3;
+}
+.age-7 {
+    background-color: #E93;
+}
+.age-7 {
+    background-color: #E63;
+}
+.age-8 {
+    background-color: #E33;
+}
+.age-9 {
+    background-color: #933;
+}
+.age-100 {
+    background-color: #000;
+}
