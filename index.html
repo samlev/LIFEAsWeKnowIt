@@ -18,7 +18,7 @@
     <div id="board">
       <table>
         <tr v-for="row in rows">
-          <td v-for="col in row" v-bind:class="calcAgeClass(col.age)"></td>
+          <td v-for="col in row" v-bind:class="calcAgeClass(col.age)" v-bind:title="col.age"></td>
         </tr>
       </table>
       <button v-on:click="step">Step</button>

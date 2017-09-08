@@ -4,25 +4,25 @@ var board = [];
 // Maximum board size
 const MAX_Y = 80; // Number of rows
 const MAX_X = 150; // Number of columns
-const TICK_TIME = 500; // the number of milliseconds between ticks.
+const TICK_TIME = 25; // the number of milliseconds between ticks.
 
 // Breeding
-const MIN_BREED_AGE = 16; // Cells must be at least this old to breed
-const MAX_BREED_AGE = 60; // Cells older than this age cannot breed
+const MIN_BREED_AGE = 10; // Cells must be at least this old to breed
+const MAX_BREED_AGE = 70; // Cells older than this age cannot breed
 const REQUIRED_PARENTS = 2; // The number of eligible neighbouring cells required for breeding
-const REDUCED_FERTILITY_AGE = 35; // From here, cells start losing fertility
+const REDUCED_FERTILITY_AGE = 45; // From here, cells start losing fertility
 const REDUCED_FERTILITY_PER_YEAR_MULTIPLIER = 0.05; // The amount (per year over REDUCED_FERTILITY_AGE) that fertility reduces
 
 // Death
 const ADULT_MORTALITY_CHANCE = 0.05; // The chance that a regular adult cell will die.
-const CHILD_MORTALITY_CUTOFF = 6; // Cells under this age are more likely to die
-const CHILD_MORTALITY_MULTIPLIER = 0.1; // The amount (per year under CHILD_MORTALITY_CUTOFF) that mortality increases
-const ELDERLY_MORTALITY_CUTOFF = 65; // Cells over this age are increasingly more likely to die
+const CHILD_MORTALITY_CUTOFF = 4; // Cells under this age are more likely to die
+const CHILD_MORTALITY_MULTIPLIER = 0.05; // The amount (per year under CHILD_MORTALITY_CUTOFF) that mortality increases
+const ELDERLY_MORTALITY_CUTOFF = 85; // Cells over this age are increasingly more likely to die
 const ELDERLY_MORTALITY_MULTIPLIER = 0.05; // The amount (per year over ELDERLY_MORTALITY_CUTOFF) that fertility reduces
 const LONELINESS_MINIMUM = 2; // The number of neighbours required to not be 'lonely'
 const CROWDED_MAXIMUM = 4; // The number of neighbours to make a cell official "crowded"
-const LONLINESS_MORTALITY_MULTIPLIER = 0.5; // Child or Elderly cells get an increased chance of dying from being lonely (added per neighbour under the LONELINESS_MINIMUM)
-const CROWDED_MORTALITY_MULTIPIER = 0.2; // Adult cells have an increased chance of dying from being overcrowded. (added per neighbour over the CROWDED_MAXIMUM)
+const LONLINESS_MORTALITY_MULTIPLIER = 0.2; // Child or Elderly cells get an increased chance of dying from being lonely (added per neighbour under the LONELINESS_MINIMUM)
+const CROWDED_MORTALITY_MULTIPIER = 0.1; // Adult cells have an increased chance of dying from being overcrowded. (added per neighbour over the CROWDED_MAXIMUM)
 
 // Start by building the board.
 for (var y = 0; y < MAX_Y; y++) {

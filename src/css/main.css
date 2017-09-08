@@ -1,13 +1,8 @@
-#board {
-    font-family: monospace;
-}
-
 #board td {
     width: 5px;
     height: 5px;
     border: 1px solid #ccc;
 }
-
 
 .age-0 {
     background-color: #FFF;
