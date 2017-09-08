@@ -4,6 +4,7 @@ var board = [];
 // Maximum board size
 const MAX_Y = 80; // Number of rows
 const MAX_X = 150; // Number of columns
+const TICK_TIME = 500; // the number of milliseconds between ticks.
 
 // Breeding
 const MIN_BREED_AGE = 16; // Cells must be at least this old to breed
@@ -41,7 +42,8 @@ for (var y = 0; y < MAX_Y; y++) {
 new Vue({
     el: '#board',
     data: {
-        rows: board
+        rows: board,
+        play: false
     },
     methods: {
         calcAgeClass: function(age) {
@@ -51,6 +53,30 @@ new Vue({
                     'age-100' :
                     "age-" + Math.ceil(age/10)
             );
+        },
+        step: function () {
+            // by default, stop as soon as we step
+            this.stop();
+            tick();
+        },
+        start: function () {
+            // turn 'auto play' on
+            this.play = true;
+            var self = this;
+
+            // make a function which ticks, then tells itself to play again in TICK_TIME, unless 'auto play' is turned off.
+            var playFunc = function () {
+                if (self.play) {
+                    tick();
+
+                    setTimeout(playFunc, TICK_TIME);
+                }
+            };
+
+            playFunc();
+        },
+        stop: function () {
+            this.play = false;
         }
     }
 });

@@ -21,6 +21,8 @@
           <td v-for="col in row" v-bind:class="calcAgeClass(col.age)"></td>
         </tr>
       </table>
+      <button v-on:click="step">Step</button>
+      <button v-on:click="(play ? stop() : start())">{{ (play ? 'Pause' : 'Run' ) }}</button>
     </div>
   </div>
 </section>
