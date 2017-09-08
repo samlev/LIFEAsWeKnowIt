@@ -17,6 +17,15 @@ I've made a number of experiments with CGoL in the past, from a pretty shitty at
 [competitive multiplayer game](http://gameoflifetotalwar.com/). I like experimenting with the edges of the core
 concept, and exploring what's possible with small variations to the basic rule set.
 
+#### What are the rules?
+
+* An empty cell has a chance to breed if there are two or more neighbours of breeding age (10-65).
+* The chance of breeding slightly decreases for every neighbouring cell that's over 35 (the older they are over that age, the lower the chance of breeding).
+* All cells have a small chance of dying on any turn.
+* Cells that are "children" (under 6) or "elderly" (over 65) have an increased chance of dying, depending on how young or old they are.
+* Young and old cells have an increased chance of dying from loneliness (less than 2 neighbours), which increases based on how lonely they are.
+* "Adult" cells (6-65) have an increased chance of dying from overcrowding (4+ neighbours), which increases based on how crowded they are.
+
 #### Can I see this without having to clone it?
 
 Sure. [Here it is](https://samlev.github.io/LIFEAsWeKnowIt/).
