@@ -17,7 +17,7 @@ concept, and exploring what's possible with small variations to the basic rule s
 
 #### Can I see this without having to clone it?
 
-Sure. It runs fairly well in [JSFiddle](https://jsfiddle.net/cd4o8vs6/).
+Sure. [Here it is](https://samlev.github.io/LIFEAsWeKnowIt/).
 
 #### This is... pretty ugly...
 
