@@ -2,7 +2,7 @@ LIFE as we know it
 ==================
 *A Cellular Automaton experiment.*
 
-[LIFE as we know it](https://i.imgur.com/CC7Tlpp.png)
+![LIFE as we know it](https://i.imgur.com/CC7Tlpp.png)
 
 #### What is this?
 
